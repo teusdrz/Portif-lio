@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --color-primary: #5443b3;
+    --color-secondary: #2a2828;
+    --color-tertiary: #ffffff;
+    --color-quaternary: #d3d3d3;
+}
+
+nav > h1 {
+    font-size: 2rem;
+    background-color: var(--color-secondary);
+    color: var(--color-tertiary);
+    padding: 20px;
+    text-align: center;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-tertiary);
+}
+
+
+main > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-secondary);
+    padding: 45px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 90%;
+    height: 100%;
+    padding: 10px;
+}
+
+form > div > label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--color-tertiary);
+    
+}
+
+form > div > input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--color-secondary);
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--color-tertiary);
+}
+
+form > div > input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 5px rgba(84, 67, 179, 0.5);
+}
+
+form > div > input[type="submit"] {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+    cursor: pointer;
+    font-size: 1.2rem;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+form > div > input[type="submit"]:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    box-shadow: 1 15px rgba(84, 67, 179, 0.5);
+}
+
+
+form > div > input[type="submit"]:active {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+    box-shadow: 0 0 5px rgba(84, 67, 179, 0.5);
+}
+
+form > div > input[type="submit"]:disabled {
+    background-color: var(--color-secondary);
+    color: var(--color-tertiary);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+form > div > button{
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+    cursor: pointer;
+    font-size: 1.2rem;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+
+}
+
+form > div > button:hover {
+    background-color: var(--color-quaternary);
+    color: var(--color-primary);
+    box-shadow: 0 0 5px rgba(84, 67, 179, 0.5);
+
+}
+
+form > div > button:active {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+    box-shadow: 0 0 5px rgba(84, 67, 179, 0.5);
+}
+
+form > div > button:disabled {
+    background-color: var(--color-secondary);
+    color: var(--color-tertiary);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+main >  h2 {
+    font-size: 2rem;
+    background-color: var(--color-secondary);
+    color: var(--color-tertiary);
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+article > h2 {
+    font-size: 2rem; /* Tamanho padrão */
+    background-color: var(--color-secondary);
+    color: var(--color-tertiary);
+    padding: 20px;
+    text-align: center;
+    margin-top: 10rem;
+    margin-left: 30rem;
+    margin-right: 30rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    article > h2 {
+        font-size: 1.5rem; /* Ajusta o tamanho da fonte */
+        margin-left: 1rem; /* Reduz as margens laterais */
+        margin-right: 1rem;
+        margin-top: 2rem; /* Reduz o espaçamento superior */
+        padding: 10px; /* Ajusta o preenchimento */
+    }
+}
+
+@media (max-width: 480px) {
+    article > h2 {
+        font-size: 1.2rem; /* Fonte menor para telas pequenas */
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-top: 1rem;
+        padding: 8px;
+    }
+}
+
+
+h2:hover {
+    background-color: #3b3939;
+    color: #7668c8;
+    box-shadow: 0 0 5px rgba(84, 67, 179, 0.5);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 80%;
+}
+
+th, td {
+    border: 1px solid var(--color-secondary);
+    padding: 10px;
+    text-align: center;
+}
+
+
+tr{
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-tertiary);
+
+}
+
+th {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: var(--color-secondary);
+    color: var(--color-tertiary);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--color-secondary);
+    color: var(--color-tertiary);
+}
+
+form > div > label{
+    display: block; 
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;  
+    color: var(--color-tertiary);
+    margin-bottom: 10px; 
+}
+
+main > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-secondary);
+    padding: 45px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 3s ease-in-out; 
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px); 
+        opacity: 0; 
+    }
+    100% {
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+
+nav > h1 {
+    font-size: 2.5rem; 
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 600; 
+    color: #ffffff; 
+    text-align: center;
+    padding: 20px 40px; 
+    margin: 20px auto; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+    width: fit-content;
+}
+
+form > div > input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid var(--color-secondary);
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background-color: #f3f3f3; 
+    color: #000000; 
+}
+form > div > input:focus {
+    border-color: var(--color-primary); /* Borda roxa ao focar */
+    border-width: 3px; 
+    box-shadow: 0 0 5px rgba(84, 67, 179, 0.5); 
+    background-color: #eae8ff;
+    color: #000000; 
+}
