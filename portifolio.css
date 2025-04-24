@@ -592,854 +592,6 @@ body {
 
 .skills-card p {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
-    text-align: center; /* Centraliza o texto */
-    line-height: 1.5; /* Melhora o espaçamento entre linhas */
-}
-
-.skills-card ul {
-    list-style: none;
-    padding: 0;
-}
-
-.skills-card li {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 0.5rem;
-}
-
-/* Ajuste de cores para os textos <li> */
-.skills-card li {
-    color: rgba(255, 255, 255, 0.8); /* Texto claro no tema escuro */
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-body.light-mode .skills-card li {
-    color: #333333; /* Texto escuro no tema claro */
-}
-
-/* Experiências */
-.experience {
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.experience-card {
-    background: linear-gradient(145deg, #232334, #1e1e2f); /* Adiciona um gradiente ao fundo */
-    padding: 2rem;
-    border-radius: 20px; /* Bordas mais arredondadas */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Adiciona uma borda sutil */
-}
-
-.experience-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); /* Intensifica a sombra */
-    border-color: var(--color-primary); /* Destaca a borda */
-    background: linear-gradient(145deg, #29293f, #232334); /* Gradiente mais claro ao passar o mouse */
-}
-
-.experience-card h3 {
-    font-size: 1.8rem; /* Aumenta o tamanho do título */
-    margin-bottom: 1rem;
-    color: var(--color-primary);
-    text-align: center; /* Centraliza o título */
-    text-transform: uppercase; /* Deixa o texto em maiúsculas */
-    letter-spacing: 1px; /* Adiciona espaçamento entre as letras */
-}
-
-.experience-card p {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
-    text-align: center; /* Centraliza o texto */
-    line-height: 1.5; /* Melhora o espaçamento entre linhas */
-    margin-bottom: 0.5rem;
-}
-
-/* Certificações */
-.certifications {
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.certifications-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.certification-card {
-    background: linear-gradient(145deg, #232334, #1e1e2f); /* Adiciona um gradiente ao fundo */
-    padding: 2rem;
-    border-radius: 20px; /* Bordas mais arredondadas */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Adiciona uma borda sutil */
-}
-
-.certification-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); /* Intensifica a sombra */
-    border-color: var(--color-primary); /* Destaca a borda */
-    background: linear-gradient(145deg, #29293f, #232334); /* Gradiente mais claro ao passar o mouse */
-}
-
-.certification-card h3 {
-    font-size: 1.8rem; /* Aumenta o tamanho do título */
-    margin-bottom: 1rem;
-    color: var(--color-primary);
-    text-align: center; /* Centraliza o título */
-    text-transform: uppercase; /* Deixa o texto em maiúsculas */
-    letter-spacing: 1px; /* Adiciona espaçamento entre as letras */
-}
-
-.certification-card p {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
-    text-align: center; /* Centraliza o texto */
-    line-height: 1.5; /* Melhora o espaçamento entre linhas */
-    margin-bottom: 0.5rem;
-}
-
-.certifications-carousel {
-    display: flex;
-    overflow-x: auto;
-    gap: 1rem;
-    scroll-behavior: smooth;
-}
-
-/* Estilização para os títulos <h2> */
-h2 {
-    font-size: 2.5rem; /* Tamanho do texto */
-    font-weight: bold; /* Texto em negrito */
-    color: var(--color-primary); /* Cor principal */
-    text-align: center; /* Centraliza o texto */
-    margin-bottom: 2rem; /* Espaço abaixo do título */
-    position: relative; /* Necessário para o efeito decorativo */
-    overflow: hidden; /* Garante que a barra decorativa não ultrapasse os limites */
-    padding: 0 1rem; /* Adiciona espaçamento interno para evitar ultrapassar os limites */
-    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
-}
-
-h2::after {
-    content: '';
-    display: block;
-    width: 0; /* Inicialmente a barra está oculta */
-    height: 4px; /* Altura da barra */
-    background-color: var(--color-primary); /* Cor da barra */
-    margin: 0 auto; /* Centraliza a barra */
-    border-radius: 2px; /* Bordas arredondadas */
-    transition: width 0.3s ease; /* Transição suave */
-}
-
-h2:hover::after {
-    width: 80%; /* A barra ocupa 80% da largura do texto */
-}
-
-/* Adiciona um efeito de sombra ao texto */
-h2 {
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Animação ao passar o mouse */
-}
-
-/* Efeito ao passar o mouse no <h2> */
-h2:hover {
-    transform: scale(1.05); /* Aumenta levemente o tamanho */
-    text-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Intensifica a sombra */
-}
-
-/* Notificação */
-.notification {
-    position: fixed;
-    top: 20px; /* Posição no topo */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%);
-    background-color: #2a2a3b; /* Fundo escuro */
-    color: var(--color-tertiary); /* Texto branco */
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    opacity: 0;
-    visibility: hidden; /* Oculta inicialmente */
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    z-index: 1000;
-}
-
-.notification.visible {
-    opacity: 1;
-    visibility: visible; /* Torna visível */
-    transform: translateX(-50%) translateY(0);
-}
-
-.notification.hidden {
-    opacity: 0;
-    visibility: hidden; /* Oculta novamente */
-    transform: translateX(-50%) translateY(-20px);
-}
-
-.notification-icon {
-    font-size: 1.5rem; /* Ícone maior */
-    color: #4caf50; /* Verde para sucesso */
-}
-
-.notification-message {
-    font-size: 1rem; /* Texto maior */
-    color: var(--color-tertiary);
-    text-align: center; /* Centraliza o texto */
-}
-
-/* Menu Responsivo */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--color-tertiary);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        gap: 1rem;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: var(--color-secondary);
-        width: 100%;
-        padding: 1rem;
-        display: none;
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .hero {
-        padding: 2rem 1rem;
-    }
-
-    .skills-grid,
-    .about-grid,
-    .experience-grid,
-    .certifications-grid {
-        grid-template-columns: 1fr; /* Exibe os itens em uma única coluna */
-        gap: 1.5rem; /* Ajusta o espaçamento entre os itens */
-    }
-
-    .skills-card,
-    .about-card,
-    .experience-card,
-    .certification-card {
-        padding: 1.5rem; /* Reduz o espaçamento interno */
-    }
-
-    form {
-        padding: 1rem;
-    }
-
-    body {
-        font-size: 14px; /* Reduz o tamanho da fonte para telas menores */
-    }
-
-    section {
-        padding: 4rem 1rem; /* Reduz o espaçamento interno */
-    }
-
-    h2 {
-        font-size: 1.8rem; /* Ajusta o tamanho dos títulos */
-    }
-
-    p {
-        font-size: 0.9rem; /* Ajusta o tamanho do texto */
-    }
-}
-
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
-    }
-
-    .menu {
-        flex-direction: column;
-        gap: 1rem;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: var(--color-secondary);
-        width: 100%;
-        padding: 1rem;
-        display: none; /* Oculta o menu inicialmente */
-    }
-
-    .menu.active {
-        display: flex; /* Exibe o menu ao clicar */
-    }
-
-    .menu-toggle {
-        display: block; /* Exibe o botão de alternância no mobile */
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        text-align: center; /* Centraliza o texto */
-        padding: 2rem 1rem;
-    }
-
-    .hero h1 {
-        font-size: 2rem; /* Reduz o tamanho do título */
-    }
-
-    .hero-description {
-        font-size: 1rem; /* Ajusta o tamanho do texto descritivo */
-    }
-
-    .hero-buttons {
-        flex-direction: column; /* Empilha os botões */
-        gap: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .timeline-container {
-        padding: 2rem 1rem; /* Reduz o espaçamento interno */
-    }
-
-    .timeline {
-        margin: 0 auto;
-        width: 2px; /* Reduz a largura da linha */
-    }
-
-    .timeline-item {
-        flex-direction: column; /* Empilha os cards */
-        align-items: center;
-    }
-
-    .timeline-content {
-        margin: 1rem 0; /* Remove o espaçamento lateral */
-        max-width: 100%; /* Garante que o card ocupe toda a largura disponível */
-    }
-
-    .timeline-item:nth-child(odd) .timeline-content,
-    .timeline-item:nth-child(even) .timeline-content {
-        margin: 0; /* Remove o espaçamento lateral */
-    }
-}
-
-@media (max-width: 768px) {
-    form {
-        padding: 1rem; /* Reduz o espaçamento interno */
-    }
-
-    input, textarea {
-        font-size: 0.9rem; /* Ajusta o tamanho do texto */
-        padding: 0.8rem; /* Reduz o espaçamento interno */
-    }
-
-    .submit-button {
-        font-size: 1rem; /* Ajusta o tamanho do botão */
-        padding: 0.8rem 1.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .back-to-top {
-        bottom: 1rem; /* Ajusta a posição do botão */
-        right: 1rem;
-        padding: 0.8rem; /* Reduz o tamanho do botão */
-    }
-}
-
-@media (max-width: 768px) {
-    /* Ajuste do contêiner da timeline */
-    .timeline-container {
-        padding: 2rem 1rem; /* Reduz o espaçamento interno */
-    }
-
-    /* Linha da timeline */
-    .timeline {
-        margin: 0 auto;
-        width: 2px; /* Reduz a largura da linha */
-    }
-
-    /* Itens da timeline */
-    .timeline-item {
-        flex-direction: column; /* Empilha os cards verticalmente */
-        align-items: center; /* Centraliza os cards */
-        margin: 2rem 0; /* Ajusta o espaçamento entre os itens */
-    }
-
-    /* Cards da timeline */
-    .timeline-content {
-        margin: 0; /* Remove o espaçamento lateral */
-        max-width: 90%; /* Garante que o card ocupe 90% da largura disponível */
-        text-align: center; /* Centraliza o texto */
-        padding: 1.5rem; /* Ajusta o espaçamento interno */
-        box-sizing: border-box; /* Inclui padding e borda no tamanho total */
-    }
-
-    /* Remove o espaçamento lateral dos cards */
-    .timeline-item:nth-child(odd) .timeline-content,
-    .timeline-item:nth-child(even) .timeline-content {
-        margin: 0; /* Remove o espaçamento lateral */
-    }
-}
-
-@media (max-width: 768px) {
-    /* Ajuste do contêiner da timeline */
-    .timeline-container {
-        padding: 2rem 1rem; /* Reduz o espaçamento interno */
-    }
-
-    /* Linha da timeline */
-    .timeline {
-        margin: 0 auto;
-        width: 4px; /* Mantém a linha centralizada */
-        background: var(--color-primary); /* Cor sólida para a linha */
-    }
-
-    /* Itens da timeline */
-    .timeline-item {
-        display: flex;
-        flex-direction: column; /* Empilha os cards verticalmente */
-        align-items: center; /* Centraliza os cards */
-        margin: 2rem 0; /* Ajusta o espaçamento entre os itens */
-    }
-
-    /* Cards da timeline */
-    .timeline-content {
-        margin: 1rem 0; /* Espaçamento vertical */
-        max-width: 90%; /* Garante que o card ocupe 90% da largura disponível */
-        text-align: center; /* Centraliza o texto */
-        padding: 1.5rem; /* Ajusta o espaçamento interno */
-        box-sizing: border-box; /* Inclui padding e borda no tamanho total */
-        position: relative;
-    }
-
-    /* Remove o espaçamento lateral dos cards */
-    .timeline-item:nth-child(odd) .timeline-content,
-    .timeline-item:nth-child(even) .timeline-content {
-        margin: 0; /* Remove o espaçamento lateral */
-    }
-
-    /* Linha decorativa no mobile */
-    .timeline::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 4px;
-        height: 100%;
-        background: var(--color-primary);
-    }
-}
-
-@media (max-width: 768px) {
-    .timeline-container {
-        padding: 2rem 1rem;
-    }
-
-    .timeline {
-        margin: 0 auto;
-        width: 2px; /* Linha mais fina */
-    }
-
-    .timeline-item {
-        flex-direction: column; /* Empilha os cards */
-        align-items: center; /* Centraliza os cards */
-        margin: 2rem 0;
-    }
-
-    .timeline-content {
-        margin: 0;
-        max-width: 90%; /* Garante que os cards ocupem 90% da largura */
-        text-align: center;
-        padding: 1.5rem;
-        box-sizing: border-box;
-    }
-}
-
-section {
-    padding: 8rem 2rem; 
-    margin-bottom: 6rem; 
-    opacity: 0;
-    transform: translateY(50px); /* Começa deslocado para baixo */
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-section.visible {
-    opacity: 1;
-    transform: translateY(0); /* Volta à posição original */
-}
-
-/* Seção de Contato */
-.contact {
-    background: linear-gradient(145deg, #232334, #1e1e2f);
-    padding: 4rem 2rem;
-    border-radius: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); 
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--color-primary);
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
-}
-
-.contact-description {
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 2rem;
-    line-height: 1.6;
-}
-
-/* Formulário */
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #1e1e2f; /* Fundo escuro */
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-body.light-mode form {
-    background-color: #ffffff; /* Fundo claro no tema claro */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra mais leve */
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
-    border-radius: 10px;
-    background-color: #2a2a3b; /* Fundo escuro */
-    color: rgba(255, 255, 255, 0.8); /* Texto claro */
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-input:focus, textarea:focus {
-    border-color: var(--color-primary);
-    box-shadow: 0 0 8px rgba(255, 77, 90, 0.5); /* Sombra ao focar */
-}
-
-body.light-mode input, body.light-mode textarea {
-    background-color: #ffffff; /* Fundo claro no tema claro */
-    color: #333333; /* Texto escuro no tema claro */
-    border: 1px solid rgba(0, 0, 0, 0.2); /* Borda sutil */
-}
-
-textarea {
-    resize: none;
-    height: 150px; /* Aumenta a altura do campo de texto */
-}
-
-/* Botão de envio */
-.submit-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem; /* Espaçamento entre o texto e o ícone */
-    background-color: var(--color-primary);
-    color: var(--color-tertiary);
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    border-radius: 50px; /* Bordas arredondadas */
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden; /* Garante que a animação não ultrapasse o botão */
-}
-
-.submit-button.loading {
-    background-color: #ff6b6b; /* Cor durante o envio */
-    cursor: not-allowed; /* Indica que o botão está desativado */
-    opacity: 0.8; /* Reduz a opacidade */
-}
-
-.submit-button.success {
-    background-color: #4caf50; /* Verde para sucesso */
-    color: #ffffff; /* Texto branco */
-}
-
-/* Ícone do botão */
-.button-icon {
-    font-size: 1.5rem;
-    display: inline-block;
-    transition: all 0.3s ease;
-    color: var(--color-tertiary); /* Cor padrão (branco) */
-}
-
-.hidden {
-    display: none; /* Oculta o ícone inicialmente */
-}
-
-.submit-button.loading .button-icon {
-    display: inline-block; /* Exibe o ícone durante o envio */
-    animation: spin 1s linear infinite; /* Gira apenas no estado de envio */
-    color: var(--color-tertiary); /* Cor padrão (branco) durante o envio */
-}
-
-.submit-button.success .button-icon {
-    display: inline-block; /* Exibe o ícone no estado de sucesso */
-    animation: none; /* Remove a animação no estado de sucesso */
-    transform: scale(1.2); /* Aumenta levemente o ícone */
-    color: #ffffff; /* Ícone branco no estado de sucesso */
-}
-
-/* Animação de rotação */
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* Inputs do formulário */
-form input,
-form textarea {
-    width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 2px solid var(--color-primary);
-    border-radius: 5px;
-    background-color: var(--color-secondary); /* Fundo no tema atual */
-    color: var(--color-tertiary); /* Texto no tema atual */
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-form input:focus,
-form textarea:focus {
-    outline: none;
-    border-color: var(--color-primary);
-    box-shadow: 0 0 5px rgba(255, 77, 90, 0.5); /* Sombra ao focar */
-}
-
-/* Inputs no tema claro */
-body.light-mode form input,
-body-light-mode form textarea {
-    background-color: #ffffff; /* Fundo branco no tema claro */
-    color: #333333; /* Texto escuro no tema claro */
-}
-
-/* Botão de envio */
-form button {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    border: none;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-form button:hover {
-    background-color: #ff6b6b; /* Cor mais clara ao passar o mouse */
-}
-
-/* Hero Section */
-.hero-description {
-    color: var(--color-tertiary); /* Garante que o texto fique visível no tema claro */
-}
-
-/* Botões na seção Hero */
-.hero-buttons {
-    display: flex;
-    gap: 1rem; /* Espaçamento entre os botões */
-}
-
-.resume-button {
-    background-color: transparent;
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-    border-radius: 50px; /* Bordas arredondadas para um design mais moderno */
-    cursor: pointer;
-    text-decoration: none; /* Remove o sublinhado */
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
-}
-
-.resume-button:hover {
-    background-color: var(--color-primary);
-    color: var(--color-tertiary);
-    transform: scale(1.1); /* Aumenta levemente o botão ao passar o mouse */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Intensifica a sombra */
-}
-
-/* Sobre */
-.about {
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.about-card {
-    background: linear-gradient(145deg, #232334, #1e1e2f); /* Adiciona um gradiente ao fundo */
-    padding: 2rem;
-    border-radius: 20px; /* Bordas mais arredondadas */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Adiciona uma borda sutil */
-}
-
-.about-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); /* Intensifica a sombra */
-    border-color: var(--color-primary); /* Destaca a borda */
-    background: linear-gradient(145deg, #29293f, #232334); /* Gradiente mais claro ao passar o mouse */
-}
-
-.about-card h3 {
-    font-size: 1.8rem; /* Aumenta o tamanho do título */
-    margin-bottom: 1rem;
-    color: var(--color-primary);
-    text-align: center; /* Centraliza o título */
-    text-transform: uppercase; /* Deixa o texto em maiúsculas */
-    letter-spacing: 1px; /* Adiciona espaçamento entre as letras */
-}
-
-.about-card p {
-    text-align: center; /* Centraliza o texto */
-    font-size: 1rem;
-    line-height: 1.8; /* Melhora o espaçamento entre linhas */
-    margin-bottom: 1rem;
-    color: rgba(255, 255, 255, 0.8); /* Texto claro no tema escuro */
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-body.light-mode .about-card p {
-    color: #333333; /* Texto escuro no tema claro */
-}
-
-/* Transição suave entre temas */
-body {
-    transition: background-color 0.8s ease, color 0.8s ease;
-}
-
-/* Animações */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Habilidades */
-.skills {
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.skills-card {
-    background: linear-gradient(145deg, #232334, #1e1e2f); /* Adiciona um gradiente ao fundo */
-    padding: 2rem;
-    border-radius: 20px; /* Bordas mais arredondadas */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Adiciona uma borda sutil */
-}
-
-.skills-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); /* Intensifica a sombra */
-    border-color: var(--color-primary); /* Destaca a borda */
-    background: linear-gradient(145deg, #29293f, #232334); /* Gradiente mais claro ao passar o mouse */
-}
-
-.skills-card h3 {
-    font-size: 1.8rem; /* Aumenta o tamanho do título */
-    margin-bottom: 1rem;
-    color: var(--color-primary);
-    text-align: center; /* Centraliza o título */
-    text-transform: uppercase; /* Deixa o texto em maiúsculas */
-    letter-spacing: 1px; /* Adiciona espaçamento entre as letras */
-}
-
-.skills-card p {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
-    text-align: center; /* Centraliza o texto */
-    line-height: 1.5; /* Melhora o espaçamento entre linhas */
-}
-
-.skills-card ul {
-    list-style: none;
-    padding: 0;
-}
-
-.skills-card li {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 0.5rem;
-}
-
-/* Ajuste de cores para os textos <li> */
-.skills-card li {
     color: rgba(255, 255, 255, 0.8); /* Texto claro no tema escuro */
     font-size: 1rem;
     line-height: 1.5;
@@ -1750,7 +902,7 @@ body.light-mode .back-to-top {
 /* Cards no tema claro */
 body.light-mode .skills-card,
 body.light-mode .about-card,
-body-light-card .experience-card,
+body.light-mode .experience-card,
 body.light-mode .certification-card {
     background: #ffffff; /* Fundo branco */
     color: #333333; /* Texto escuro */
@@ -2113,40 +1265,6 @@ body.light-mode .timeline-content:hover {
     }
 }
 
-@media (max-width: 768px) {
-    /* Ajuste do contêiner da timeline */
-    .timeline-container {
-        padding: 2rem 1rem; /* Reduz o espaçamento interno */
-    }
-
-    /* Linha da timeline */
-    .timeline {
-        margin: 0 auto;
-        width: 2px; /* Reduz a largura da linha */
-    }
-
-    /* Itens da timeline */
-    .timeline-item {
-        flex-direction: column; /* Empilha os cards verticalmente */
-        align-items: center; /* Centraliza os cards */
-        margin: 2rem 0; /* Ajusta o espaçamento entre os itens */
-    }
-
-    /* Cards da timeline */
-    .timeline-content {
-        margin: 0; /* Remove o espaçamento lateral */
-        max-width: 100%; /* Garante que o card ocupe toda a largura disponível */
-        text-align: center; /* Centraliza o texto */
-        padding: 1.5rem; /* Ajusta o espaçamento interno */
-        box-sizing: border-box; /* Inclui padding e borda no tamanho total */
-    }
-
-    /* Remove o espaçamento lateral dos cards */
-    .timeline-item:nth-child(odd) .timeline-content,
-    .timeline-item:nth-child(even) .timeline-content {
-        margin: 0; /* Remove o espaçamento lateral */
-    }
-}
 
 /* Animação de entrada */
 .intro-animation {
@@ -2661,5 +1779,125 @@ body.light-mode .timeline-content:hover {
     to {
         transform: rotate(360deg);
     }
+}
+
+@media (max-width: 768px) {
+    /* Ajuste do contêiner da timeline */
+    .timeline-container {
+        padding: 2rem 1rem; /* Reduz o espaçamento interno */
+    }
+
+    /* Linha da timeline */
+    .timeline {
+        margin: 0 auto;
+        width: 4px; /* Linha mais fina */
+        background: var(--color-primary); /* Cor sólida para a linha */
+        position: relative;
+    }
+
+    /* Itens da timeline */
+    .timeline-item {
+        display: flex;
+        flex-direction: column; /* Empilha os cards verticalmente */
+        align-items: center; /* Centraliza os cards */
+        margin: 2rem 0; /* Ajusta o espaçamento entre os itens */
+        position: relative;
+    }
+
+    /* Cards da timeline */
+    .timeline-content {
+        width: 90%; /* Garante que os cards ocupem 90% da largura da tela */
+        max-width: 350px; /* Define uma largura máxima */
+        text-align: center; /* Centraliza o texto */
+        padding: 1.5rem; /* Ajusta o espaçamento interno */
+        box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+        background: linear-gradient(145deg, #232334, #1e1e2f); /* Gradiente no fundo */
+        border-radius: 15px; /* Bordas arredondadas */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
+        color: rgba(255, 255, 255, 0.8); /* Texto claro */
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    }
+
+    /* Cards à esquerda da linha */
+    .timeline-item:nth-child(odd) .timeline-content {
+        margin-right: auto; /* Alinha os cards à esquerda */
+        transform: translateX(-10%); /* Ajusta a posição para a esquerda */
+    }
+
+    /* Cards à direita da linha */
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: auto; /* Alinha os cards à direita */
+        transform: translateX(10%); /* Ajusta a posição para a direita */
+    }
+
+    /* Títulos dos cards */
+    .timeline-content h3 {
+        font-size: 1.5rem; /* Ajusta o tamanho do título */
+        margin-bottom: 1rem;
+        color: var(--color-primary); /* Destaque no título */
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* Texto dos cards */
+    .timeline-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.8); /* Texto claro */
+        word-wrap: break-word; /* Quebra palavras longas */
+        overflow-wrap: break-word; /* Garante que o texto não ultrapasse os limites */
+    }
+
+    /* Linha decorativa */
+    .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 100%;
+        background: var(--color-primary); /* Cor sólida para a linha */
+    }
+}
+
+/* Card interno do contato no tema escuro */
+.contact form {
+    background: linear-gradient(145deg, #232334, #1e1e2f); /* Fundo escuro */
+    color: rgba(255, 255, 255, 0.8); /* Texto claro */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
+    border-radius: 15px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+/* Inputs no card interno do contato no tema escuro */
+.contact form input,
+.contact form textarea {
+    background-color: #1e1e2f; /* Fundo escuro */
+    color: rgba(255, 255, 255, 0.8); /* Texto claro */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra leve */
+}
+
+/* Foco nos inputs no tema escuro */
+.contact form input:focus,
+.contact form textarea:focus {
+    border-color: var(--color-primary); /* Destaque ao focar */
+    box-shadow: 0 0 8px rgba(255, 77, 90, 0.5); /* Sombra ao focar */
+}
+
+/* Botão de envio no card interno do contato no tema escuro */
+.contact form .submit-button {
+    background-color: var(--color-primary); /* Fundo do botão */
+    color: #ffffff; /* Texto branco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra leve */
+}
+
+.contact form .submit-button:hover {
+    background-color: #ff6b6b; /* Fundo mais claro ao passar o mouse */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
 }
 
