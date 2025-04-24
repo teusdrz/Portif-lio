@@ -407,3 +407,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     timelineItems.forEach((item) => observer.observe(item));
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const introAnimation = document.getElementById("intro-animation");
+
+    // Exibe a introdução por 5 segundos
+    setTimeout(() => {
+        introAnimation.style.opacity = "0";
+        introAnimation.style.visibility = "hidden";
+    }, 5000); // 5 segundos
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const introAnimation = document.getElementById("intro-animation");
+
+    setTimeout(() => {
+        introAnimation.style.display = "none";
+    }, 2000); // Duração da animação (2 segundos)
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const loadingScreen = document.getElementById("loading-screen");
+
+    // Exibe a introdução por 8 segundos
+    setTimeout(() => {
+        loadingScreen.style.opacity = "0";
+        loadingScreen.style.visibility = "hidden";
+    }, 8000); // 8 segundos
+});

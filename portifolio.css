@@ -261,7 +261,8 @@ body:not(.light-mode) .theme-toggle::before {
     overflow: hidden;
     white-space: nowrap;
     border-right: 2px solid var(--color-primary);
-    animation: typing-loop 4s steps(30, end) infinite, blink 0.5s step-end infinite alternate;
+    animation: typing-loop 6s steps(30, end) infinite, blink 0.5s step-end infinite alternate;
+    max-width: 100%; /* Garante que o texto não ultrapasse a largura da tela */
 }
 
 @keyframes typing-loop {
@@ -1000,7 +1001,7 @@ h2:hover {
     /* Cards da timeline */
     .timeline-content {
         margin: 0; /* Remove o espaçamento lateral */
-        max-width: 100%; /* Garante que o card ocupe toda a largura disponível */
+        max-width: 90%; /* Garante que o card ocupe 90% da largura disponível */
         text-align: center; /* Centraliza o texto */
         padding: 1.5rem; /* Ajusta o espaçamento interno */
         box-sizing: border-box; /* Inclui padding e borda no tamanho total */
@@ -1060,6 +1061,31 @@ h2:hover {
         width: 4px;
         height: 100%;
         background: var(--color-primary);
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-container {
+        padding: 2rem 1rem;
+    }
+
+    .timeline {
+        margin: 0 auto;
+        width: 2px; /* Linha mais fina */
+    }
+
+    .timeline-item {
+        flex-direction: column; /* Empilha os cards */
+        align-items: center; /* Centraliza os cards */
+        margin: 2rem 0;
+    }
+
+    .timeline-content {
+        margin: 0;
+        max-width: 90%; /* Garante que os cards ocupem 90% da largura */
+        text-align: center;
+        padding: 1.5rem;
+        box-sizing: border-box;
     }
 }
 
@@ -1724,7 +1750,7 @@ body.light-mode .back-to-top {
 /* Cards no tema claro */
 body.light-mode .skills-card,
 body.light-mode .about-card,
-body.light-mode .experience-card,
+body-light-card .experience-card,
 body.light-mode .certification-card {
     background: #ffffff; /* Fundo branco */
     color: #333333; /* Texto escuro */
@@ -2040,6 +2066,53 @@ body.light-mode .timeline-content:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra mais intensa */
 }
 
+/* Animação de entrada */
+.intro-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #1e1e2f, #232334);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    animation: fadeOut 2s ease-in-out forwards;
+}
+
+.intro-animation h1 {
+    font-size: 3rem;
+    color: #ff4d5a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: scaleUp 1.5s ease-in-out forwards;
+}
+
+/* Animação de fade-out */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Animação de escala */
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 @media (max-width: 768px) {
     /* Ajuste do contêiner da timeline */
     .timeline-container {
@@ -2072,6 +2145,521 @@ body.light-mode .timeline-content:hover {
     .timeline-item:nth-child(odd) .timeline-content,
     .timeline-item:nth-child(even) .timeline-content {
         margin: 0; /* Remove o espaçamento lateral */
+    }
+}
+
+/* Animação de entrada */
+.intro-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #1e1e2f, #232334);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    animation: fadeOut 2s ease-in-out forwards;
+}
+
+.intro-content {
+    text-align: center;
+    color: #ffffff;
+    animation: fadeInScale 1.5s ease-in-out;
+}
+
+.intro-content h1 {
+    font-size: 3rem;
+    color: #ff4d5a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.intro-content p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Animação de fade-in e escala */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animação de fade-out */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Tela de carregamento */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #1e1e2f, #232334);
+    display: flex;
+    flex-direction: column; /* Alinha o texto e o spinner verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+    overflow: hidden;
+}
+
+/* Conteúdo do carregamento */
+.loading-content {
+    text-align: center;
+    color: #ffffff;
+    animation: fadeInScale 1.5s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Alinha o texto e o spinner verticalmente */
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Espaçamento entre o texto e o spinner */
+}
+
+/* Logo no carregamento */
+.loading-logo {
+    font-size: 4rem; /* Tamanho do texto */
+    font-weight: bold;
+    color: #ff4d5a;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: pulse 1.5s infinite;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+}
+
+/* Spinner animado */
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid #ff4d5a;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra no spinner */
+}
+
+/* Animação de fade-in e escala */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animação de fade-out */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Tela de carregamento */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #1e1e2f, #232334);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+/* Conteúdo do carregamento */
+.loading-content {
+    text-align: center;
+    color: #ffffff;
+    animation: fadeInScale 1.5s ease-in-out;
+}
+
+/* Logo no carregamento */
+.loading-logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff4d5a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    animation: pulse 1.5s infinite;
+}
+
+/* Spinner animado */
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid #ff4d5a;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animação de fade-in e escala */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animação de fade-out */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Tela de carregamento */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #1e1e2f, #232334);
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+/* Conteúdo do carregamento */
+.loading-content {
+    text-align: center;
+    color: #ffffff;
+    animation: fadeInScale 1.5s ease-in-out;
+}
+
+/* Logo no carregamento */
+.loading-logo {
+    font-size: 4rem; /* Aumenta o tamanho do texto */
+    font-weight: bold;
+    color: #ff4d5a;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem; /* Espaçamento entre o texto e o spinner */
+    animation: pulse 1.5s infinite;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao texto */
+}
+
+/* Spinner animado */
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid #ff4d5a;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao spinner */
+}
+
+/* Animação de fade-in e escala */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animação de fade-out */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Tela de carregamento */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #1e1e2f, #232334);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+/* Conteúdo do carregamento */
+.loading-content {
+    text-align: center;
+    color: #ffffff;
+    animation: fadeInScale 1.5s ease-in-out;
+}
+
+/* Logo no carregamento */
+.loading-logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff4d5a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    animation: pulse 1.5s infinite;
+}
+
+/* Spinner animado */
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid #ff4d5a;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animação de fade-in e escala */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animação de fade-out */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Tela de carregamento */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #1e1e2f, #232334);
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+/* Conteúdo do carregamento */
+.loading-content {
+    text-align: center;
+    color: #ffffff;
+    animation: fadeInScale 1.5s ease-in-out;
+}
+
+/* Logo no carregamento */
+.loading-logo {
+    font-size: 4rem; /* Aumenta o tamanho do texto */
+    font-weight: bold;
+    color: #ff4d5a;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem; /* Espaçamento entre o texto e o spinner */
+    animation: pulse 1.5s infinite;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao texto */
+}
+
+/* Spinner animado */
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid #ff4d5a;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao spinner */
+}
+
+/* Animação de fade-in e escala */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animação de fade-out */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
 
