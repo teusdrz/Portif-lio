@@ -1013,6 +1013,56 @@ h2:hover {
     }
 }
 
+@media (max-width: 768px) {
+    /* Ajuste do contêiner da timeline */
+    .timeline-container {
+        padding: 2rem 1rem; /* Reduz o espaçamento interno */
+    }
+
+    /* Linha da timeline */
+    .timeline {
+        margin: 0 auto;
+        width: 4px; /* Mantém a linha centralizada */
+        background: var(--color-primary); /* Cor sólida para a linha */
+    }
+
+    /* Itens da timeline */
+    .timeline-item {
+        display: flex;
+        flex-direction: column; /* Empilha os cards verticalmente */
+        align-items: center; /* Centraliza os cards */
+        margin: 2rem 0; /* Ajusta o espaçamento entre os itens */
+    }
+
+    /* Cards da timeline */
+    .timeline-content {
+        margin: 1rem 0; /* Espaçamento vertical */
+        max-width: 90%; /* Garante que o card ocupe 90% da largura disponível */
+        text-align: center; /* Centraliza o texto */
+        padding: 1.5rem; /* Ajusta o espaçamento interno */
+        box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+        position: relative;
+    }
+
+    /* Remove o espaçamento lateral dos cards */
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        margin: 0; /* Remove o espaçamento lateral */
+    }
+
+    /* Linha decorativa no mobile */
+    .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 100%;
+        background: var(--color-primary);
+    }
+}
+
 section {
     padding: 8rem 2rem; 
     margin-bottom: 6rem; 
